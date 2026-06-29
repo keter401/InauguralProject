@@ -1,0 +1,68 @@
+﻿E:\C++Project\ShaderProject\ShaderProject\Shaders\Common3D.hlsli(142,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\BasicSkinnedVS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\DissolvePS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\DissolveVS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\MirrorPS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\MirrorVS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\NormalMapPS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\NormalMapVS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\OutlinePS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\OutlineVS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\PbrPS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\PbrVS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli(193,31): warning X4000: use of potentially uninitialized variable (CalcRimLight)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\PhongPS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ShadowPS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\Common3D.hlsli(142,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ShadowSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ShadowVS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\Common3D.hlsli(142,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\PhongSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\SkyboxPS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\SkyboxVS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli(193,31): warning X4000: use of potentially uninitialized variable (CalcRimLight)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ToonPS.cso
+E:\C++Project\ShaderProject\ShaderProject\Shaders\Common3D.hlsli(142,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ToonSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ToonVS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\Basic3DPS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\Basic3DVS.cso
+  compilation object save succeeded; see E:\C++Project\ShaderProject\ShaderProject\x64\Debug\PhongVS.cso
+  App.cpp
+  Field.cpp
+  Mirror.cpp
+  Polygon.cpp
+  Skybox.cpp
+  GameObjectManager.cpp
+  ShadowManager.cpp
+  RenderTexture.cpp
+  main.cpp
+  コードを生成中...
+  ShaderProject.vcxproj -> E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ShaderProject.exe
+  E:\C++Project\ShaderProject\ShaderProject\x64\Debug\ShaderProject.exe: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\debug\bin\assimp-vc143-mtd.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Debug\assimp-vc143-mtd.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Debug\assimp-vc143-mtd.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\debug\bin\poly2tri.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Debug\poly2tri.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Debug\poly2tri.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\debug\bin\minizipd.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Debug\minizipd.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Debug\minizipd.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\debug\bin\zd.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Debug\zd.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Debug\zd.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\debug\bin\kubazip.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Debug\kubazip.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Debug\kubazip.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\debug\bin\pugixml.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Debug\pugixml.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Debug\pugixml.dll: message: 依存関係を配置しています

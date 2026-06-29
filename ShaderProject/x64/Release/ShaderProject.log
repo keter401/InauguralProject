@@ -1,0 +1,83 @@
+﻿  Model.cpp
+  コード生成しています。
+  1 of 5208 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    76 functions had inline decision re-evaluated but remain unchanged
+  コード生成が終了しました。
+  ShaderProject.vcxproj -> E:\C++Project\ShaderProject\ShaderProject\x64\Release\ShaderProject.exe
+  E:\C++Project\ShaderProject\ShaderProject\x64\Release\ShaderProject.exe: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\bin\assimp-vc143-mt.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Release\assimp-vc143-mt.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Release\assimp-vc143-mt.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\bin\poly2tri.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Release\poly2tri.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Release\poly2tri.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\bin\minizip.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Release\minizip.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Release\minizip.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\bin\z.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Release\z.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Release\z.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\bin\kubazip.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Release\kubazip.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Release\kubazip.dll: message: 依存関係を配置しています
+  E:\dev\vcpkg\installed\x64-windows\bin\pugixml.dll -> E:\C++Project\ShaderProject\ShaderProject\x64\Release\pugixml.dll はスキップされました。最新の状態です
+  E:\C++Project\ShaderProject\ShaderProject\x64\Release\pugixml.dll: message: 依存関係を配置しています
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Animation\SD_unitychan_motion_Generic.fbx
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\ball.fbx
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\box.mtl
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\box.obj
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\Character.fbx
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\cube.fbx
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\model.fbx
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\SD_unitychan_generic.fbx
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\body_01.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\cheek_00.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\eyeline_00.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\eye_iris_L_00.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\eye_iris_R_00.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\face_00.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\hair_01.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Model\UnityChan.fbm\skin_01.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\ferndale_studio_11_2k.hdr
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Noise_Normal.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\water-map.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\ChibiUnityChan\utc_all2.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\ChibiUnityChan\utc_all2_dark.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\ChibiUnityChan\utc_all2_light.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\ChibiUnityChan\utc_all2_outline_normal.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\ChibiUnityChan\utc_all2_outline_width_map.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\ChibiUnityChan\utc_nomal.tga
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Cube\honeycomb_basecolor_04.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Cube\honeycomb_base_metalness.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Cube\honeycomb_emission_mask.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Cube\honeycomb_normal.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Cube\honeycomb_output.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Cube\honeycomb_specular_roughness.png
+  E:\C++Project\ShaderProject\ShaderProject\Assets\Texture\Cube\noise.jpg
+  32 個のファイルをコピーしました
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\Basic3DPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\Basic3DVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\BasicSkinnedVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\Common3D.hlsli
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\DissolvePS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\DissolveVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\GizmoPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\GizmoVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\LightCommon.hlsli
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\MirrorPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\MirrorVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\NormalMapPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\NormalMapVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\Outline.hlsli
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\OutlinePS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\OutlineVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\PbrPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\PbrVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\PhongPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\PhongSkinnedVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\PhongVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\ShadowPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\ShadowSkinnedVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\ShadowVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\SkyboxPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\SkyboxVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\ToonPS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\ToonSkinnedVS.hlsl
+  E:\C++Project\ShaderProject\ShaderProject\Shaders\ToonVS.hlsl
+  29 個のファイルをコピーしました

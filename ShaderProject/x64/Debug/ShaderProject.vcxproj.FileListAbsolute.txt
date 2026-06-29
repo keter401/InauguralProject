@@ -1,0 +1,7 @@
+E:\C++Project\ShaderProject\ShaderProject\x64\Debug\assimp-vc143-mtd.dll
+E:\C++Project\ShaderProject\ShaderProject\x64\Debug\poly2tri.dll
+E:\C++Project\ShaderProject\ShaderProject\x64\Debug\minizipd.dll
+E:\C++Project\ShaderProject\ShaderProject\x64\Debug\zd.dll
+E:\C++Project\ShaderProject\ShaderProject\x64\Debug\kubazip.dll
+E:\C++Project\ShaderProject\ShaderProject\x64\Debug\pugixml.dll
+E:\C++Project\ShaderProject\ShaderProject\ShaderProject\x64\Debug\ShaderPr.AC6F8F6A.Up2Date
