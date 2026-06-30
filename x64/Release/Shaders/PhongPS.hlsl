@@ -21,8 +21,9 @@ float4 main(PS_INPUT_PHONG input) : SV_TARGET
     for (int lI = 0; lI < lightCount; lI++)
         lLighting += CalcPhongContribution(lights[lI], lN, lV, input.worldPos,
                     lBaseColor.rgb, CalcShadowForLight(lI, input.worldPos), shininess);
-
+        
     float3 lLinearColor = lAmbient + lLighting + CalcRimLight(lN, lV);
+    lLinearColor += ApplyDissolve(input.uv);
     float3 lFinal = GammaCorrect(ToneMapAces(lLinearColor));
 
     return float4(lFinal, lBaseColor.a);

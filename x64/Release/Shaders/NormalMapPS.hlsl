@@ -24,6 +24,7 @@ float4 main(PS_INPUT_NORMAL_MAP input) : SV_TARGET
                     lBaseColor.rgb, CalcShadowForLight(lI, input.worldPos), shininess);
 
     float3 lLinearColor = lAmbient + lLighting;
+    lLinearColor += ApplyDissolve(input.uv);
     float3 lFinal = GammaCorrect(ToneMapAces(lLinearColor));
 
     return float4(lFinal, lBaseColor.a);

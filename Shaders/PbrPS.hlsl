@@ -141,6 +141,7 @@ float4 main(PS_INPUT_NORMAL_MAP input) : SV_TARGET
 
     float3 lAmbient = (lIblDiffuse + lIblSpecular) * iblIntensity;
     float3 lColor = lAmbient + lLo;
+    lColor += ApplyDissolve(input.uv);
 
     // --- Tone map + gamma
     lColor = GammaCorrect(ToneMapAces(lColor));

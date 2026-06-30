@@ -1,6 +1,6 @@
 // ============================================================
 // SceneConfig.h
-// シーン初期配置の設定データ（位置・スケール・パス等）を一元管理する
+// シーン初期配置の設定データ（位置・スケール・パス等）を管理する
 // ロジック（GameObjectManager）からデータを分離するための定義層
 // 制作者：Chan WingChung
 // ============================================================
@@ -26,12 +26,12 @@ struct CONFIG
     static inline const VECTOR3 FIELD_SCALE = VECTOR3(10.0f, 1.0f, 10.0f);
 
     // ─── ミラー
-    static inline const VECTOR3 MIRROR_POSITION = VECTOR3(2.0f, 1.0f, 2.0f);
+    static inline const VECTOR3 MIRROR_POSITION      = VECTOR3(2.0f, 1.0f, 2.0f);
     static inline const VECTOR3 MIRROR_ROTATION_AXIS = VECTOR3(0.0f, 1.0f, 0.0f);
-    static inline const VECTOR3 MIRROR_SCALE = VECTOR3(3.0f, 3.0f, 1.0f);
+    static inline const VECTOR3 MIRROR_SCALE         = VECTOR3(3.0f, 3.0f, 1.0f);
     static inline const float   MIRROR_ROTATION_ANGLE_DEG = 45.0f;
 
     // ─── PBR キューブ
     static inline const VECTOR3 CUBE_POSITION = VECTOR3(-2.5f, 1.5f, 0.0f);
-    static inline const VECTOR3 CUBE_SCALE = VECTOR3(0.5f, 0.5f, 0.5f);
+    static inline const VECTOR3 CUBE_SCALE    = VECTOR3(0.5f, 0.5f, 0.5f);
 };

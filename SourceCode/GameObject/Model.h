@@ -123,6 +123,7 @@ private:
     float m_rimIntensity = 1.0f;
 
     // „Ÿ„Ÿ„Ÿ ƒfƒBƒ]ƒ‹ƒu
+    bool  m_bDissolveEnabled = false;
     float m_dissolveThreshold = 0.0f;
     float m_dissolveEdgeWidth = 0.05f;
     float m_dissolveEdgeColor[4] = { 1.0f, 0.4f, 0.0f, 1.0f };

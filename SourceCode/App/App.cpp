@@ -232,6 +232,8 @@ void APP::Draw()
     m_shadowManager.BindForLighting();
     m_gameObjectManager.Draw();
 
+    m_imguiManager.BeginFrame();
+
     m_gameObjectManager.DrawImGui();
     m_shaderManager.DrawImGui();
 

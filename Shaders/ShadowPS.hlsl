@@ -17,7 +17,8 @@ float main(VS_OUTPUT_SHADOW input) : SV_TARGET
 {
     // --- Dissolve clip so dissolving objects also drop matching shadows
     float lNoise = SmoothNoise(input.uv);
-    clip(lNoise - dissolveThreshold);
+    if (dissolveEnabled)
+        clip(lNoise - dissolveThreshold);
 
     float lDist = length(input.worldPos - genLightPos);
     return saturate(lDist / genFarZ);

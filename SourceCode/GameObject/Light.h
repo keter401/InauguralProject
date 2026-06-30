@@ -121,9 +121,6 @@ public:
     float              GetRange()   const { return m_range; }
     CB_LIGHT_DATA      GetCbData()  const { return m_cbData; }
 
-    // ─── GPU バインド
-    void Bind(UINT slot = 1);
-
     // ─── キューブシャドウ行列取得
     const MATRIX4X4& GetCubeView(UINT face)     const { return m_cubeView[face]; }
     const MATRIX4X4& GetCubeProjection()        const { return m_cubeProj; }

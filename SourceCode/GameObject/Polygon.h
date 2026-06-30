@@ -34,6 +34,7 @@ private:
     ComPtr<ID3D11Buffer> m_pIndexBuffer;
     UINT                 m_indexCount = 0;
 
+    ComPtr<ID3D11Buffer> m_pDissolveOffCb;
     ComPtr<ID3D11Buffer> m_pConstantBuffer;
     CB_WVP               m_cbData = {};
 

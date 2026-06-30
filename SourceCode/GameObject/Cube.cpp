@@ -147,6 +147,16 @@ bool CUBE::InitConstantBuffer()
     if (FAILED(m_pDevice->CreateBuffer(&lPbrDesc, nullptr, &m_pCbPbr)))
         return false;
 
+    // ─── ディゾルブ OFF 用 CB を生成する（このオブジェクトは消えないため b5 を常に OFF）
+    CB_DISSOLVE lDissolveOff = {};            // dissolveEnabled = 0
+    D3D11_BUFFER_DESC lDisDesc = {};
+    lDisDesc.ByteWidth = sizeof(CB_DISSOLVE);
+    lDisDesc.Usage = D3D11_USAGE_DEFAULT;
+    lDisDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+    D3D11_SUBRESOURCE_DATA lDisData = { &lDissolveOff };
+    if (FAILED(m_pDevice->CreateBuffer(&lDisDesc, &lDisData, &m_pDissolveOffCb)))
+        return false;
+
     return true;
 }
 
@@ -275,6 +285,10 @@ void CUBE::DrawInternal(const MATRIX4X4* pOverrideViewProj, const VECTOR3* pOver
         m_pContext->UpdateSubresource(m_pCbPbr.Get(), 0, nullptr, &m_cbPbr, 0, 0);
         ID3D11Buffer* lPbrCb = m_pCbPbr.Get();
         m_pContext->PSSetConstantBuffers(6, 1, &lPbrCb);
+
+        // ─── このオブジェクトはディゾルブしないので b5 を OFF で上書きする
+        ID3D11Buffer* lDisOff = m_pDissolveOffCb.Get();
+        m_pContext->PSSetConstantBuffers(5, 1, &lDisOff);
 
         // ─── テクスチャを各スロットにバインドする
         if (m_albedoTexture && m_albedoTexture->IsLoaded())

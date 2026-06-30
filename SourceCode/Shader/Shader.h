@@ -54,7 +54,7 @@ public:
         EXTRA_CB_NONE = 0,
         EXTRA_CB_OUTLINE = 1 << 0,  // アウトライン用 CB（b3）が必要
         EXTRA_CB_MIRROR = 1 << 1,  // ミラー用 CB（b4）が必要
-        EXTRA_CB_DISSOLVE = 1 << 2,  // ディゾルブ用 CB（b5）が必要
+//      EXTRA_CB_DISSOLVE = 1 << 2,  // ディゾルブ用 CB（b5）が必要 // 追記：ディゾルブはマテリアル側で対応するため、シェーダー側では不要になった
         EXTRA_CB_PBR = 1 << 3,  // PBR 用 CB（b6）が必要
     };
 

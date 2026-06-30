@@ -137,8 +137,7 @@ void MODEL::DrawInternal(const MATRIX4X4* pOverrideViewProj)
         }
 
         // ─── ディゾルブ CB が必要な場合は b5 にバインドする
-        bool lNeedsDissolveCb = lShader->RequiresExtraCb(SHADER::EXTRA_CB_DISSOLVE);
-        if (lNeedsDissolveCb)
+        if (m_bDissolveEnabled)
         {
             m_dissolveCbData.dissolveThreshold = m_dissolveThreshold;
             m_dissolveCbData.edgeWidth = m_dissolveEdgeWidth;
@@ -302,7 +301,8 @@ void MODEL::DrawShadow(
 
     // ─── ディゾルブ CB をセットしてシャドウ形状に反映する（b5）
     m_dissolveCbData.dissolveThreshold = m_dissolveThreshold;
-    m_dissolveCbData.edgeWidth = m_dissolveEdgeWidth;
+    m_dissolveCbData.edgeWidth  = m_dissolveEdgeWidth;
+    m_dissolveCbData.dissolveEnabled = m_bDissolveEnabled ? 1 : 0;
     m_dissolveCbData.edgeColor = { m_dissolveEdgeColor[0], m_dissolveEdgeColor[1],
                                             m_dissolveEdgeColor[2], m_dissolveEdgeColor[3] };
     m_pContext->UpdateSubresource(m_dissolveConstantBuffer.Get(), 0, nullptr, &m_dissolveCbData, 0, 0);
@@ -488,6 +488,7 @@ void MODEL::DrawImGui()
 
         if (ImGui::CollapsingHeader("Dissolve"))
         {
+            ImGui::Checkbox("Enable Dissolve", &m_bDissolveEnabled);
             ImGui::SliderFloat("Threshold", &m_dissolveThreshold, 0.0f, 1.0f);
             ImGui::DragFloat("Edge Width", &m_dissolveEdgeWidth, 0.001f, 0.0f, 1.0f);
             ImGui::ColorEdit4("Edge Color", m_dissolveEdgeColor);

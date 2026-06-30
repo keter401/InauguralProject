@@ -12,24 +12,24 @@ cbuffer CB_WVP : register(b0)
 {
     float4x4 world;
     float4x4 wvp;
-    float4 materialColor;
-    int useTexture;
-    int useNormalMap;
-    float2 padWvp;
-    float3 cameraPos;
-    float padWvp2;
+    float4   materialColor;
+    int      useTexture;
+    int      useNormalMap;
+    float2   padWvp;
+    float3   cameraPos;
+    float    padWvp2;
 
     float toonLightThreshold;
     float toonDarkThreshold;
-    int useToonLightTexture;
-    int useToonDarkTexture;
+    int   useToonLightTexture;
+    int   useToonDarkTexture;
 
     float3 rimColor;
-    float rimPower;
-    float rimIntensity;
-    int useRimLight;
-    float shininess;
-    float ambientStrength;
+    float  rimPower;
+    float  rimIntensity;
+    int    useRimLight;
+    float  shininess;
+    float  ambientStrength;
 };
 
 // --- Effect-specific constant buffers
@@ -40,16 +40,17 @@ cbuffer CB_MIRROR : register(b4)
 };
 cbuffer CB_DISSOLVE : register(b5)
 {
-    float dissolveThreshold;
-    float edgeWidth;
-    float2 pad0Dissolve;
+    float  dissolveThreshold;
+    float  edgeWidth;
+    int    dissolveEnabled;
+    float  pad0Dissolve;
     float4 edgeColor;
 };
 cbuffer CB_PBR : register(b6)
 {
     float metallic;
     float roughness;
-    int useMetallicRoughnessMap;
+    int   useMetallicRoughnessMap;
     float iblIntensity;
 };
 
@@ -214,6 +215,23 @@ float SmoothNoise(float2 uv)
     float lD = Hash21(lI + float2(1.0f, 1.0f));
     float2 lU = smoothstep(0.0f, 1.0f, lF);
     return lerp(lerp(lA, lB, lU.x), lerp(lC, lD, lU.x), lU.y);
+}
+
+// ------------------------------------------------------------
+// ApplyDissolve : 消滅エフェクト（クリップ＋エッジ発光）だけを担当する
+//                 シェーディングは各PSのまま。無効時は何もしない
+// 戻り値：最終色に加算するエッジ発光色（無効時は float3(0,0,0)）
+// ------------------------------------------------------------
+float3 ApplyDissolve(float2 uv)
+{
+    if (dissolveEnabled == 0)
+        return float3(0, 0, 0);
+
+    float lNoise = SmoothNoise(uv);
+    clip(lNoise - dissolveThreshold); // 閾値以下を破棄＝消える
+
+    float lEdgeFactor = 1.0f - saturate((lNoise - dissolveThreshold) / max(edgeWidth, 0.0001f));
+    return edgeColor.rgb * lEdgeFactor; // 境界の発光色
 }
 
 #endif

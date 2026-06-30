@@ -13,6 +13,9 @@
       <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Debug\DissolvePS.cso</FullPath>
     </ContentFile>
     <ContentFile>
+      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Debug\DissolveSkinnedVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
       <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Debug\DissolveVS.cso</FullPath>
     </ContentFile>
     <ContentFile>

@@ -36,6 +36,7 @@ private:
 
     ComPtr<ID3D11Buffer> m_pConstantBuffer;
     ComPtr<ID3D11Buffer> m_pCbPbr;
+    ComPtr<ID3D11Buffer> m_pDissolveOffCb;
     CB_WVP               m_cbData = {};
     CB_PBR               m_cbPbr = {};
 

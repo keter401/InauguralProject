@@ -58,7 +58,8 @@ struct CB_DISSOLVE
 {
     float             dissolveThreshold;
     float             edgeWidth;
-    DirectX::XMFLOAT2 pad0;
+    int               dissolveEnabled;
+    float             pad0;
     DirectX::XMFLOAT4 edgeColor;
 };
 

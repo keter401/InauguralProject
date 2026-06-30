@@ -121,19 +121,6 @@ bool SHADER_MANAGER::RegisterShaders()
         return false;
     m_shaders.push_back(std::move(lMirrorShader));
 
-    // ─── Dissolve（ノイズテクスチャを使ったディゾルブ効果・ディゾルブ CB 必要）
-    auto lDissolve = std::make_unique<SHADER>();
-    if (!lDissolve->Initialize(
-        m_pDevice,
-        L"Shaders/DissolveVS.hlsl",
-        L"Shaders/DissolvePS.hlsl",
-        "Dissolve",
-        SHADER::INPUT_LAYOUT_TYPE::MODEL_3D_TANGENT,
-        SHADER::CULL_MODE::BACK,
-        SHADER::EXTRA_CB_DISSOLVE))
-        return false;
-    m_shaders.push_back(std::move(lDissolve));
-
     // ─── PBR（物理ベースレンダリング・IBL 対応・PBR CB 必要）
     auto lPbrShader = std::make_unique<SHADER>();
     if (!lPbrShader->Initialize(

@@ -95,12 +95,20 @@ bool GAME_OBJECT_MANAGER::Initialize(
 // ------------------------------------------------------------
 void GAME_OBJECT_MANAGER::AssignShaders(SHADER_MANAGER& shaderManager)
 {
-    // ─── モデルに Basic シェーダーを割り当てる（デフォルト描画用）
-    SHADER* lBasicShader = shaderManager.GetByName("Basic");
-    if (lBasicShader)
+    // ─── モデルに シェーダーを割り当てる
+    for (auto* lModel : GetModels())
     {
-        for (auto* lModel : GetModels())
-            lModel->AddShader(lBasicShader);
+        if (SHADER* lSk = shaderManager.GetByName("BasicSkinned"))
+            lModel->SetSkinnedShaderFor("Basic", lSk);
+
+        if (SHADER* lSk = shaderManager.GetByName("PhongSkinned"))
+            lModel->SetSkinnedShaderFor("Phong", lSk);
+
+        if (SHADER* lTs = shaderManager.GetByName("ToonSkinned"))
+            lModel->SetSkinnedShaderFor("Toon", lTs);
+
+        SHADER* lToonShader = shaderManager.GetByName("Toon");
+        lModel->AddShader(lToonShader);
     }
 
     // ─── ライトマネージャーにギズモシェーダーを設定する
@@ -127,19 +135,6 @@ void GAME_OBJECT_MANAGER::AssignShaders(SHADER_MANAGER& shaderManager)
     SHADER* lSkyShader = shaderManager.GetByName("Skybox");
     if (lSkyShader && m_pSkyBox)
         m_pSkyBox->SetShader(lSkyShader);
-
-    // ─── モデルにスキン版シェーダーを対応付ける
-    for (auto* lModel : GetModels())
-    {
-        if (SHADER* lSk = shaderManager.GetByName("BasicSkinned"))
-            lModel->SetSkinnedShaderFor("Basic", lSk);
-
-        if (SHADER* lSk = shaderManager.GetByName("PhongSkinned"))
-            lModel->SetSkinnedShaderFor("Phong", lSk);
-
-        if (SHADER* lTs = shaderManager.GetByName("ToonSkinned"))
-            lModel->SetSkinnedShaderFor("Toon", lTs);
-    }
 }
 
 // ------------------------------------------------------------

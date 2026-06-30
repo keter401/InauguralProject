@@ -322,18 +322,6 @@ void LIGHT::UpdateCubeShadowMatrices()
 }
 
 // ------------------------------------------------------------
-// Bind
-// ライトデータ CB を指定スロットにバインドする
-// 引数：slot - 定数バッファスロット番号
-// ------------------------------------------------------------
-void LIGHT::Bind(UINT slot)
-{
-    // ─── VS と PS の両方に同じスロットでバインドする
-    m_pContext->VSSetConstantBuffers(slot, 1, m_pCb.GetAddressOf());
-    m_pContext->PSSetConstantBuffers(slot, 1, m_pCb.GetAddressOf());
-}
-
-// ------------------------------------------------------------
 // DrawGizmoMesh
 // ギズモ用頂点バッファをワールド行列と色で描画する汎用関数
 // 引数：pVb         - 頂点バッファポインタ

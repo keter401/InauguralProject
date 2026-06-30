@@ -93,6 +93,10 @@ void POLYGON::DrawInternal(const MATRIX4X4* pOverrideViewProj)
     m_pContext->VSSetConstantBuffers(0, 1, &lCb);
     m_pContext->PSSetConstantBuffers(0, 1, &lCb);
 
+    // ─── このオブジェクトはディゾルブしないので b5 を OFF で上書きする
+    ID3D11Buffer* lDisOff = m_pDissolveOffCb.Get();
+    m_pContext->PSSetConstantBuffers(5, 1, &lDisOff);
+
     // ─── サブクラスの追加 CB バインドフック（MIRROR はスクリーンサイズ CB を設定する）
     BindExtraCb();
 
@@ -177,6 +181,16 @@ bool POLYGON::InitConstantBuffer()
     lCbDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
     return SUCCEEDED(m_pDevice->CreateBuffer(
         &lCbDesc, nullptr, m_pConstantBuffer.ReleaseAndGetAddressOf()));
+
+    // ─── ディゾルブ OFF 用 CB を生成する
+    CB_DISSOLVE lDissolveOff = {};            // dissolveEnabled = 0
+    D3D11_BUFFER_DESC lDisDesc = {};
+    lDisDesc.ByteWidth = sizeof(CB_DISSOLVE);
+    lDisDesc.Usage = D3D11_USAGE_DEFAULT;
+    lDisDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+    D3D11_SUBRESOURCE_DATA lDisData = { &lDissolveOff };
+    if (FAILED(m_pDevice->CreateBuffer(&lDisDesc, &lDisData, &m_pDissolveOffCb)))
+        return false;
 }
 
 // ------------------------------------------------------------

@@ -10,12 +10,6 @@
       <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\BasicSkinnedVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\DissolvePS.cso</FullPath>
-    </ContentFile>
-    <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\DissolveVS.cso</FullPath>
-    </ContentFile>
-    <ContentFile>
       <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\MirrorPS.cso</FullPath>
     </ContentFile>
     <ContentFile>

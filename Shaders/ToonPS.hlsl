@@ -71,6 +71,7 @@ float4 main(VS_OUTPUT_PHONG input) : SV_TARGET
 
     float3 lAmbient = lBaseColor.rgb * 0.15f;
     float3 lFinalColor = max(lLitColor, lAmbient) + CalcRimLight(lN, lV);
+    lFinalColor += ApplyDissolve(input.uv);
 
     return float4(saturate(lFinalColor), lBaseColor.a);
 }
