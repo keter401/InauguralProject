@@ -107,6 +107,9 @@ void GAME_OBJECT_MANAGER::AssignShaders(SHADER_MANAGER& shaderManager)
         if (SHADER* lTs = shaderManager.GetByName("ToonSkinned"))
             lModel->SetSkinnedShaderFor("Toon", lTs);
 
+        if (SHADER* lOs = shaderManager.GetByName("OutlineSkinned"))
+            lModel->SetSkinnedShaderFor("Outline", lOs);
+
         SHADER* lToonShader = shaderManager.GetByName("Toon");
         lModel->AddShader(lToonShader);
     }

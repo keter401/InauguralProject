@@ -141,6 +141,7 @@ void MODEL::DrawInternal(const MATRIX4X4* pOverrideViewProj)
         {
             m_dissolveCbData.dissolveThreshold = m_dissolveThreshold;
             m_dissolveCbData.edgeWidth = m_dissolveEdgeWidth;
+            m_dissolveCbData.dissolveEnabled = 1;
             m_dissolveCbData.edgeColor = { m_dissolveEdgeColor[0], m_dissolveEdgeColor[1],
                                                     m_dissolveEdgeColor[2], m_dissolveEdgeColor[3] };
             m_pContext->UpdateSubresource(m_dissolveConstantBuffer.Get(), 0, nullptr, &m_dissolveCbData, 0, 0);

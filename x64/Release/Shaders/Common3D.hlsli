@@ -218,9 +218,7 @@ float SmoothNoise(float2 uv)
 }
 
 // ------------------------------------------------------------
-// ApplyDissolve : 消滅エフェクト（クリップ＋エッジ発光）だけを担当する
-//                 シェーディングは各PSのまま。無効時は何もしない
-// 戻り値：最終色に加算するエッジ発光色（無効時は float3(0,0,0)）
+// ApplyDissolve
 // ------------------------------------------------------------
 float3 ApplyDissolve(float2 uv)
 {
@@ -228,10 +226,10 @@ float3 ApplyDissolve(float2 uv)
         return float3(0, 0, 0);
 
     float lNoise = SmoothNoise(uv);
-    clip(lNoise - dissolveThreshold); // 閾値以下を破棄＝消える
+    clip(lNoise - dissolveThreshold); // Discard pixels below the threshold = dissolve
 
     float lEdgeFactor = 1.0f - saturate((lNoise - dissolveThreshold) / max(edgeWidth, 0.0001f));
-    return edgeColor.rgb * lEdgeFactor; // 境界の発光色
+    return edgeColor.rgb * lEdgeFactor; // Glow color at the edge
 }
 
 #endif

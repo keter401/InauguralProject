@@ -327,5 +327,8 @@
     <FxCompile Include="Shaders\ShadowSkinnedVS.hlsl">
       <Filter>Shader</Filter>
     </FxCompile>
+    <FxCompile Include="Shaders\OutlineSkinnedVS.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

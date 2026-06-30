@@ -146,7 +146,7 @@ bool SHADER_MANAGER::RegisterShaders()
         return false;
     m_shaders.push_back(std::move(lSkyShader));
 
-    // スキニング（ Phong シェーダー対応のスケルトンアニメーション ）
+    // ─── スキニング（ Phong シェーダー対応のスケルトンアニメーション ）
     auto lPhongSkinned = std::make_unique<SHADER>();
     if(!lPhongSkinned->Initialize(
         m_pDevice,
@@ -159,7 +159,7 @@ bool SHADER_MANAGER::RegisterShaders()
         return false;
     m_shaders.push_back(std::move(lPhongSkinned));
 
-    // スキニング（ Toon シェーダー対応のスケルトンアニメーション ）
+    // ─── スキニング（ Toon シェーダー対応のスケルトンアニメーション ）
     auto lToonSkinned = std::make_unique<SHADER>();
     if (!lToonSkinned->Initialize(
         m_pDevice,
@@ -172,7 +172,7 @@ bool SHADER_MANAGER::RegisterShaders()
         return false;
     m_shaders.push_back(std::move(lToonSkinned));
 
-    // スキニング（ Basic シェーダー対応のスケルトンアニメーション ）
+    // ─── スキニング（ Basic シェーダー対応のスケルトンアニメーション ）
     auto lBasicSkinned = std::make_unique<SHADER>();
     if (!lBasicSkinned->Initialize(
         m_pDevice,
@@ -185,7 +185,7 @@ bool SHADER_MANAGER::RegisterShaders()
         return false;
     m_shaders.push_back(std::move(lBasicSkinned));
 
-    // スキニング（ 影をスケルトンアニメーションを適用する ）
+    // ─── スキニング（ 影をスケルトンアニメーションを適用する ）
     auto lShadowSkinned = std::make_unique<SHADER>();
     if (!lShadowSkinned->Initialize(
         m_pDevice,
@@ -197,6 +197,19 @@ bool SHADER_MANAGER::RegisterShaders()
         SHADER::EXTRA_CB_NONE))
         return false;
     m_shaders.push_back(std::move(lShadowSkinned));
+
+    // ─── スキニング（ Basic シェーダー対応のスケルトンアニメーション ）
+    auto lOutlineSkinned = std::make_unique<SHADER>();
+    if (!lOutlineSkinned->Initialize(
+        m_pDevice,
+        L"Shaders/OutlineSkinnedVS.hlsl",
+        L"Shaders/OutlinePS.hlsl",
+        "OutlineSkinned",
+        SHADER::INPUT_LAYOUT_TYPE::SKINNED,
+        SHADER::CULL_MODE::FRONT,
+        SHADER::EXTRA_CB_OUTLINE))
+        return false;
+    m_shaders.push_back(std::move(lOutlineSkinned));
 
     return true;
 }

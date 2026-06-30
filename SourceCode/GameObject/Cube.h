@@ -45,13 +45,13 @@ private:
 
     // ─── 依存オブジェクト
     CAMERA* m_pCamera = nullptr;
-    LIGHT* m_pLight = nullptr;
+    LIGHT*  m_pLight  = nullptr;
 
     // ─── 変換
     VECTOR3     m_position = { 0.0f, 0.0f, 0.0f };
     VECTOR3     m_rotation = { 0.0f, 0.0f, 0.0f };
-    VECTOR3     m_scale = { 1.0f, 1.0f, 1.0f };
-    std::string m_name = "PBR_Cube";
+    VECTOR3     m_scale    = { 1.0f, 1.0f, 1.0f };
+    std::string m_name     = "PBR_Cube";
 
     // ─── テクスチャ
     std::unique_ptr<TEXTURE> m_albedoTexture;

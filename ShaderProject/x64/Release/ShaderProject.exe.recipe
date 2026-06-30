@@ -2,81 +2,84 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\ShaderProject.exe</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ShaderProject.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\BasicSkinnedVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\BasicSkinnedVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\MirrorPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\MirrorPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\MirrorVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\MirrorVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\NormalMapPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\NormalMapPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\NormalMapVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\NormalMapVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\OutlinePS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\OutlinePS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\OutlineVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\OutlineSkinnedVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\PbrPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\OutlineVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\PbrVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\PbrPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\PhongPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\PbrVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\ShadowPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\PhongPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\ShadowSkinnedVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ShadowPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\ShadowVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ShadowSkinnedVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\PhongSkinnedVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ShadowVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\SkyboxPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\PhongSkinnedVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\SkyboxVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\SkyboxPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\ToonPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\SkyboxVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\ToonSkinnedVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ToonPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\ToonVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ToonSkinnedVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\GizmoPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ToonVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\Basic3DPS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\GizmoPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\Basic3DVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\Basic3DPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\GizmoVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\Basic3DVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>E:\C++Project\ShaderProject\ShaderProject\x64\Release\PhongVS.cso</FullPath>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\GizmoVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\PhongVS.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
