@@ -10,6 +10,12 @@
       <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\BasicSkinnedVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\CloudPS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\CloudVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
       <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\MirrorPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
@@ -65,6 +71,18 @@
     </ContentFile>
     <ContentFile>
       <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ToonVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ViewerPSCube.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ViewerPS2D.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ViewerPSCubeArray.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\ViewerVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
       <FullPath>E:\C++Project\C++\InauguralProject\x64\Release\GizmoPS.cso</FullPath>

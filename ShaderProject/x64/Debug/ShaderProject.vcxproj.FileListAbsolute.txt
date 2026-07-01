@@ -11,7 +11,6 @@ E:\C++Project\C++\InauguralProject\x64\Debug\minizipd.dll
 E:\C++Project\C++\InauguralProject\x64\Debug\zd.dll
 E:\C++Project\C++\InauguralProject\x64\Debug\kubazip.dll
 E:\C++Project\C++\InauguralProject\x64\Debug\pugixml.dll
-E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\ShaderPr.AC6F8F6A.Up2Date
 C:\InauguralProject\x64\Debug\assimp-vc143-mtd.dll
 C:\InauguralProject\x64\Debug\poly2tri.dll
 C:\InauguralProject\x64\Debug\minizipd.dll

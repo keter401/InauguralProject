@@ -1,77 +1,4 @@
-﻿  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\BasicSkinnedVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\MirrorPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\MirrorVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\NormalMapPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\NormalMapVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\OutlinePS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\OutlineSkinnedVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\OutlineVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\PbrPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\PbrVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\PhongPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\ShadowPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\ShadowSkinnedVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\ShadowVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\PhongSkinnedVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\SkyboxPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\SkyboxVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\ToonPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\ToonSkinnedVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\ToonVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\GizmoPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\Basic3DPS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\Basic3DVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\GizmoVS.cso
-  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Release\PhongVS.cso
-  AnimationClip.cpp
-  Animator.cpp
-  App.cpp
-  Camera.cpp
-  Cube.cpp
-  Field.cpp
-  Light.cpp
-  Mirror.cpp
-  Model.cpp
-  Polygon.cpp
-  Skybox.cpp
-  main.cpp
-  GameObjectManager.cpp
-  LightManager.cpp
-  ShaderManager.cpp
-  ShadowManager.cpp
-  Matrix4x4.cpp
-  RenderTexture.cpp
-  Texture.cpp
-  Shader.cpp
-  コンパイル中...
-  IblBaker.cpp
-  ImguiManager.cpp
-  imgui.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_impl_dx11.cpp
-  imgui_impl_win32.cpp
-  imgui_tables.cpp
-  imgui_widgets.cpp
-  コード生成しています。
-  5172 of 5208 functions (99.3%) were compiled, the rest were copied from previous compilation.
-    42 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
-  コード生成が終了しました。
-  ShaderProject.vcxproj -> E:\C++Project\C++\InauguralProject\x64\Release\ShaderProject.exe
-  E:\C++Project\C++\InauguralProject\x64\Release\ShaderProject.exe: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\bin\assimp-vc143-mt.dll -> E:\C++Project\C++\InauguralProject\x64\Release\assimp-vc143-mt.dll はスキップされました。最新の状態です
-  E:\C++Project\C++\InauguralProject\x64\Release\assimp-vc143-mt.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\bin\poly2tri.dll -> E:\C++Project\C++\InauguralProject\x64\Release\poly2tri.dll はスキップされました。最新の状態です
-  E:\C++Project\C++\InauguralProject\x64\Release\poly2tri.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\bin\minizip.dll -> E:\C++Project\C++\InauguralProject\x64\Release\minizip.dll はスキップされました。最新の状態です
-  E:\C++Project\C++\InauguralProject\x64\Release\minizip.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\bin\z.dll -> E:\C++Project\C++\InauguralProject\x64\Release\z.dll はスキップされました。最新の状態です
-  E:\C++Project\C++\InauguralProject\x64\Release\z.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\bin\kubazip.dll -> E:\C++Project\C++\InauguralProject\x64\Release\kubazip.dll はスキップされました。最新の状態です
-  E:\C++Project\C++\InauguralProject\x64\Release\kubazip.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\bin\pugixml.dll -> E:\C++Project\C++\InauguralProject\x64\Release\pugixml.dll はスキップされました。最新の状態です
-  E:\C++Project\C++\InauguralProject\x64\Release\pugixml.dll: message: 依存関係を配置しています
+﻿  ShaderProject.vcxproj -> E:\C++Project\C++\InauguralProject\x64\Release\ShaderProject.exe
   E:\C++Project\C++\InauguralProject\Assets\Animation\SD_unitychan_motion_Generic.fbx
   E:\C++Project\C++\InauguralProject\Assets\Model\ball.fbx
   E:\C++Project\C++\InauguralProject\Assets\Model\box.mtl
@@ -108,6 +35,8 @@
   E:\C++Project\C++\InauguralProject\Shaders\Basic3DPS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\Basic3DVS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\BasicSkinnedVS.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\CloudPS.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\CloudVS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli
   E:\C++Project\C++\InauguralProject\Shaders\GizmoPS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\GizmoVS.hlsl
@@ -133,4 +62,8 @@
   E:\C++Project\C++\InauguralProject\Shaders\ToonPS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\ToonSkinnedVS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\ToonVS.hlsl
-  28 個のファイルをコピーしました
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerPS2D.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerPSCube.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerPSCubeArray.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerVS.hlsl
+  34 個のファイルをコピーしました
