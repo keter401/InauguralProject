@@ -36,13 +36,13 @@ bool BUFFER_VIEWER::Initialize(ID3D11Device* pDevice, ID3D11DeviceContext* pCont
         return false;
 
     // ─── キューブ用 PS
-    if (FAILED(D3DCompileFromFile(L"Shaders/ViewerPS.hlsl", nullptr, nullptr,
+    if (FAILED(D3DCompileFromFile(L"Shaders/ViewerPSCube.hlsl", nullptr, nullptr,
         "main", "ps_5_0", 0, 0, &lBlob, &lErr))) return false;
     if (FAILED(m_pDevice->CreatePixelShader(lBlob->GetBufferPointer(), lBlob->GetBufferSize(), nullptr, &m_pPsCube)))
         return false;
 
     // ─── キューブ配列用 PS
-    if (FAILED(D3DCompileFromFile(L"Shaders/ViewerPSCube.hlsl", nullptr, nullptr,
+    if (FAILED(D3DCompileFromFile(L"Shaders/ViewerPSCubeArray.hlsl", nullptr, nullptr,
         "main", "ps_5_0", 0, 0, &lBlob, &lErr)))
     {
         if (lErr) OutputDebugStringA(static_cast<const char*>(lErr->GetBufferPointer()));

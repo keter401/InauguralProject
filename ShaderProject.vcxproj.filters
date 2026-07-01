@@ -360,10 +360,10 @@
     <FxCompile Include="Shaders\ViewerPS2D.hlsl">
       <Filter>Shader</Filter>
     </FxCompile>
-    <FxCompile Include="Shaders\ViewerPS.hlsl">
+    <FxCompile Include="Shaders\ViewerPSCube.hlsl">
       <Filter>Shader</Filter>
     </FxCompile>
-    <FxCompile Include="Shaders\ViewerPSCube.hlsl">
+    <FxCompile Include="Shaders\ViewerPSCubeArray.hlsl">
       <Filter>Shader</Filter>
     </FxCompile>
   </ItemGroup>
