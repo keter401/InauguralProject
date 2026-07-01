@@ -132,6 +132,15 @@
     <ClCompile Include="SourceCode\Animation\Animator.cpp">
       <Filter>ソース ファイル\Animation</Filter>
     </ClCompile>
+    <ClCompile Include="SourceCode\Utility\Profiler.cpp">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCode\GameObject\Cloud.cpp">
+      <Filter>ソース ファイル\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCode\Utility\BufferViewer.cpp">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SourceCode\App\App.h">
@@ -242,6 +251,15 @@
     <ClInclude Include="SourceCode\Animation\AssimpConvert.h">
       <Filter>ソース ファイル\Animation</Filter>
     </ClInclude>
+    <ClInclude Include="SourceCode\Utility\Profiler.h">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCode\GameObject\Cloud.h">
+      <Filter>ソース ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCode\Utility\BufferViewer.h">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Common3D.hlsli">
@@ -328,6 +346,24 @@
       <Filter>Shader</Filter>
     </FxCompile>
     <FxCompile Include="Shaders\OutlineSkinnedVS.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CloudVS.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CloudPS.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerVS.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerPS2D.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerPS.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerPSCube.hlsl">
       <Filter>Shader</Filter>
     </FxCompile>
   </ItemGroup>

@@ -76,6 +76,12 @@ public:
     float          GetRotationAngleDeg() const { return m_rotationAngleDeg; }
     const VECTOR3& GetScale()            const { return m_scale; }
 
+    // ─── 反射レンダーテクスチャの SRV（バッファビューア用）
+    ID3D11ShaderResourceView* GetReflectionSrv() const
+    {
+        return m_renderTexture ? m_renderTexture->GetSrv() : nullptr;
+    }
+
     // ─── 反射計算
     MATRIX4X4 CalcReflectionView(
         const VECTOR3& realEye,

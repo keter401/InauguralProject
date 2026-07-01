@@ -23,6 +23,7 @@
     <ClCompile Include="SourceCode\Animation\Animator.cpp" />
     <ClCompile Include="SourceCode\App\App.cpp" />
     <ClCompile Include="SourceCode\GameObject\Camera.cpp" />
+    <ClCompile Include="SourceCode\GameObject\Cloud.cpp" />
     <ClCompile Include="SourceCode\GameObject\Cube.cpp" />
     <ClCompile Include="SourceCode\GameObject\Field.cpp" />
     <ClCompile Include="SourceCode\GameObject\Light.cpp" />
@@ -39,6 +40,7 @@
     <ClCompile Include="SourceCode\Resource\RenderTexture.cpp" />
     <ClCompile Include="SourceCode\Resource\Texture.cpp" />
     <ClCompile Include="SourceCode\Shader\Shader.cpp" />
+    <ClCompile Include="SourceCode\Utility\BufferViewer.cpp" />
     <ClCompile Include="SourceCode\Utility\IblBaker.cpp" />
     <ClCompile Include="SourceCode\Utility\ImguiManager.cpp" />
     <ClCompile Include="SourceCode\Utility\Imgui\imgui.cpp" />
@@ -48,6 +50,7 @@
     <ClCompile Include="SourceCode\Utility\Imgui\imgui_impl_win32.cpp" />
     <ClCompile Include="SourceCode\Utility\Imgui\imgui_tables.cpp" />
     <ClCompile Include="SourceCode\Utility\Imgui\imgui_widgets.cpp" />
+    <ClCompile Include="SourceCode\Utility\Profiler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SourceCode\Animation\AnimationClip.h" />
@@ -55,6 +58,7 @@
     <ClInclude Include="SourceCode\Animation\AssimpConvert.h" />
     <ClInclude Include="SourceCode\App\App.h" />
     <ClInclude Include="SourceCode\GameObject\Camera.h" />
+    <ClInclude Include="SourceCode\GameObject\Cloud.h" />
     <ClInclude Include="SourceCode\GameObject\Cube.h" />
     <ClInclude Include="SourceCode\GameObject\Field.h" />
     <ClInclude Include="SourceCode\GameObject\GameObject.h" />
@@ -75,6 +79,7 @@
     <ClInclude Include="SourceCode\Resource\RenderTexture.h" />
     <ClInclude Include="SourceCode\Resource\Texture.h" />
     <ClInclude Include="SourceCode\Shader\Shader.h" />
+    <ClInclude Include="SourceCode\Utility\BufferViewer.h" />
     <ClInclude Include="SourceCode\Utility\IblBaker.h" />
     <ClInclude Include="SourceCode\Utility\ImguiManager.h" />
     <ClInclude Include="SourceCode\Utility\Imgui\imconfig.h" />
@@ -85,10 +90,31 @@
     <ClInclude Include="SourceCode\Utility\Imgui\imstb_rectpack.h" />
     <ClInclude Include="SourceCode\Utility\Imgui\imstb_textedit.h" />
     <ClInclude Include="SourceCode\Utility\Imgui\imstb_truetype.h" />
+    <ClInclude Include="SourceCode\Utility\Profiler.h" />
     <ClInclude Include="SourceCode\Utility\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Shaders\BasicSkinnedVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\CloudPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\CloudVS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
@@ -331,6 +357,46 @@
       <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename).cso</ObjectFileOutput>
       <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).cso</ObjectFileOutput>
       <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerPS2D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerPSCube.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\ViewerVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
     <None Include="Shaders\Common3D.hlsli">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

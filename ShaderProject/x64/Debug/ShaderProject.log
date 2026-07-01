@@ -1,18 +1,108 @@
-﻿  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\OutlinePS.cso
+﻿E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(143,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\BasicSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\CloudPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\CloudVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\MirrorPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\MirrorVS.cso
+E:\C++Project\C++\InauguralProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(226,31): warning X4000: use of potentially uninitialized variable (ApplyDissolve)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\NormalMapPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\NormalMapVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\OutlinePS.cso
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(143,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\OutlineSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\OutlineVS.cso
+E:\C++Project\C++\InauguralProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(226,31): warning X4000: use of potentially uninitialized variable (ApplyDissolve)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\PbrPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\PbrVS.cso
+E:\C++Project\C++\InauguralProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+E:\C++Project\C++\InauguralProject\Shaders\LightCommon.hlsli(193,31): warning X4000: use of potentially uninitialized variable (CalcRimLight)
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(226,31): warning X4000: use of potentially uninitialized variable (ApplyDissolve)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\PhongPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ShadowPS.cso
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(143,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ShadowSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ShadowVS.cso
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(143,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\PhongSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\SkyboxPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\SkyboxVS.cso
+E:\C++Project\C++\InauguralProject\Shaders\LightCommon.hlsli(65,20): warning X4000: use of potentially uninitialized variable (CalcShadowForLight)
+E:\C++Project\C++\InauguralProject\Shaders\LightCommon.hlsli(193,31): warning X4000: use of potentially uninitialized variable (CalcRimLight)
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(226,31): warning X4000: use of potentially uninitialized variable (ApplyDissolve)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ToonPS.cso
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(143,72): warning X4000: use of potentially uninitialized variable (ComputeSkinMatrix)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ToonSkinnedVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ToonVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ViewerPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ViewerPS2D.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ViewerPSCube.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\ViewerVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\GizmoPS.cso
+E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli(226,31): warning X4000: use of potentially uninitialized variable (ApplyDissolve)
+  
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\Basic3DPS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\Basic3DVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\GizmoVS.cso
+  compilation object save succeeded; see E:\C++Project\C++\InauguralProject\x64\Debug\PhongVS.cso
+  AnimationClip.cpp
+  Animator.cpp
+  App.cpp
+  Camera.cpp
+  Cloud.cpp
+  Cube.cpp
+  Field.cpp
+  Light.cpp
+  Mirror.cpp
   Model.cpp
+  Polygon.cpp
+  Skybox.cpp
+  main.cpp
+  GameObjectManager.cpp
+  LightManager.cpp
+  ShaderManager.cpp
+  ShadowManager.cpp
+  Matrix4x4.cpp
+  RenderTexture.cpp
+  Texture.cpp
+  コードを生成中...
+  コンパイル中...
+  Shader.cpp
+  BufferViewer.cpp
+  IblBaker.cpp
+  ImguiManager.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Profiler.cpp
+  コードを生成中...
   ShaderProject.vcxproj -> E:\C++Project\C++\InauguralProject\x64\Debug\ShaderProject.exe
   E:\C++Project\C++\InauguralProject\x64\Debug\ShaderProject.exe: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\debug\bin\assimp-vc143-mtd.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\assimp-vc143-mtd.dll はスキップされました。最新の状態です
+  C:\vcpkg\installed\x64-windows\debug\bin\assimp-vc143-mtd.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\assimp-vc143-mtd.dll はスキップされました。最新の状態です
   E:\C++Project\C++\InauguralProject\x64\Debug\assimp-vc143-mtd.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\debug\bin\poly2tri.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\poly2tri.dll はスキップされました。最新の状態です
+  C:\vcpkg\installed\x64-windows\debug\bin\poly2tri.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\poly2tri.dll はスキップされました。最新の状態です
   E:\C++Project\C++\InauguralProject\x64\Debug\poly2tri.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\debug\bin\minizipd.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\minizipd.dll はスキップされました。最新の状態です
+  C:\vcpkg\installed\x64-windows\debug\bin\minizipd.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\minizipd.dll はスキップされました。最新の状態です
   E:\C++Project\C++\InauguralProject\x64\Debug\minizipd.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\debug\bin\zd.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\zd.dll はスキップされました。最新の状態です
+  C:\vcpkg\installed\x64-windows\debug\bin\zd.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\zd.dll はスキップされました。最新の状態です
   E:\C++Project\C++\InauguralProject\x64\Debug\zd.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\debug\bin\kubazip.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\kubazip.dll はスキップされました。最新の状態です
+  C:\vcpkg\installed\x64-windows\debug\bin\kubazip.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\kubazip.dll はスキップされました。最新の状態です
   E:\C++Project\C++\InauguralProject\x64\Debug\kubazip.dll: message: 依存関係を配置しています
-  E:\dev\vcpkg\installed\x64-windows\debug\bin\pugixml.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\pugixml.dll はスキップされました。最新の状態です
+  C:\vcpkg\installed\x64-windows\debug\bin\pugixml.dll -> E:\C++Project\C++\InauguralProject\x64\Debug\pugixml.dll はスキップされました。最新の状態です
   E:\C++Project\C++\InauguralProject\x64\Debug\pugixml.dll: message: 依存関係を配置しています
   E:\C++Project\C++\InauguralProject\Assets\Animation\SD_unitychan_motion_Generic.fbx
   E:\C++Project\C++\InauguralProject\Assets\Model\ball.fbx
@@ -50,6 +140,8 @@
   E:\C++Project\C++\InauguralProject\Shaders\Basic3DPS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\Basic3DVS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\BasicSkinnedVS.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\CloudPS.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\CloudVS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\Common3D.hlsli
   E:\C++Project\C++\InauguralProject\Shaders\GizmoPS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\GizmoVS.hlsl
@@ -75,4 +167,8 @@
   E:\C++Project\C++\InauguralProject\Shaders\ToonPS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\ToonSkinnedVS.hlsl
   E:\C++Project\C++\InauguralProject\Shaders\ToonVS.hlsl
-  28 個のファイルをコピーしました
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerPS.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerPS2D.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerPSCube.hlsl
+  E:\C++Project\C++\InauguralProject\Shaders\ViewerVS.hlsl
+  34 個のファイルをコピーしました

@@ -12,8 +12,11 @@
 #include "Manager/GameObjectManager.h"
 #include "Manager/ShaderManager.h"
 #include "Manager/ShadowManager.h"
+#include "GameObject/Cloud.h"
 #include "ImGuiManager.h"
+#include "Profiler.h"
 #include "IblBaker.h"
+#include "BufferViewer.h" 
 
 using Microsoft::WRL::ComPtr;
 
@@ -41,8 +44,10 @@ private:
     SHADER_MANAGER      m_shaderManager;
     SHADOW_MANAGER      m_shadowManager;
     IMGUI_MANAGER       m_imguiManager;
+    PROFILER            m_profiler;
     IBL_BAKER           m_iblBaker;
-
+    BUFFER_VIEWER       m_bufferViewer;
+        
     // ─── 初期化ヘルパー
     bool InitWindow(HINSTANCE hInstance, int nCmdShow);
     bool InitDirectX();
@@ -55,6 +60,10 @@ private:
     LARGE_INTEGER m_perfFreq = {};
     LARGE_INTEGER m_prevCounter = {};
     float         m_deltaSeconds = 0.0f;
+
+	// ─── 雲
+    CLOUD m_cloud;
+    float m_timeSeconds = 0.0f;
 
 public:
     // ─── ライフサイクル

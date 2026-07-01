@@ -269,7 +269,7 @@ void SHADER_MANAGER::DrawImGui()
             ImGui::Combo("##Shader", &m_selectedShaderIdx,
                 lShaderNames.data(),
                 static_cast<int>(lShaderNames.size()));
-
+            
             ImGui::SameLine();
             if (ImGui::Button("Add Shader"))
             {
@@ -277,12 +277,13 @@ void SHADER_MANAGER::DrawImGui()
                 MODEL* lTargetModel = m_models[m_selectedModelIdx];
                 lTargetModel->AddShader(lShader);
             }
+            
         }
 
         ImGui::Spacing();
         ImGui::Separator();
         ImGui::Spacing();
-
+        
         // ─── 選択中モデルに割り当てられたシェーダーを一覧表示して削除できるようにする
         {
             MODEL* lTargetModel = m_models[m_selectedModelIdx];

@@ -39,7 +39,7 @@ bool GAME_OBJECT_MANAGER::Initialize(
     // ─── ライトマネージャーにカメラを渡し最初のライトを追加する
     m_lightManager.SetCamera(m_pCamera);
     LIGHT* lLight = m_lightManager.AddLight();
-    lModelPtr->SetLight(lLight);
+    //lModelPtr->SetLight(lLight);    
 
     // ─── フィールド（床面）を生成して設定する
     auto lField = std::make_unique<FIELD>();

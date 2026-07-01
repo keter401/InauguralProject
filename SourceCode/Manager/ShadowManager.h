@@ -63,7 +63,6 @@ private:
     bool CreateResources();
     void RenderLightCube(const SHADOW_PASS_CONTEXT& context, int lightIndex);
     void RestoreMainTarget(const SHADOW_PASS_CONTEXT& context);
-
 public:
     // ─── 定数
     static const UINT SHADOW_MAP_SIZE = 1024;
@@ -77,4 +76,7 @@ public:
 
     // ─── GPU バインド（ライティングパス用）
     void BindForLighting(UINT cubeArraySlot = 2, UINT cbSlot = 2, UINT samplerSlot = 1);
+
+    // ─── キューブ配列シャドウマップの SRV（バッファビューア用）
+    ID3D11ShaderResourceView* GetCubeArraySrv() const { return m_pCubeArraySrv.Get(); }
 };

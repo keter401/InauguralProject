@@ -7,7 +7,6 @@
 #pragma once
 
 #include <assimp/scene.h>
-
 #include "AnimationClip.h"
 
 class ANIMATOR

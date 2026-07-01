@@ -2,6 +2,7 @@ E:\C++Project\C++\InauguralProject\SourceCode\Animation\AnimationClip.cpp;E:\C++
 E:\C++Project\C++\InauguralProject\SourceCode\Animation\Animator.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Animator.obj
 E:\C++Project\C++\InauguralProject\SourceCode\App\App.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\App.obj
 E:\C++Project\C++\InauguralProject\SourceCode\GameObject\Camera.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Camera.obj
+E:\C++Project\C++\InauguralProject\SourceCode\GameObject\Cloud.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Cloud.obj
 E:\C++Project\C++\InauguralProject\SourceCode\GameObject\Cube.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Cube.obj
 E:\C++Project\C++\InauguralProject\SourceCode\GameObject\Field.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Field.obj
 E:\C++Project\C++\InauguralProject\SourceCode\GameObject\Light.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Light.obj
@@ -18,6 +19,7 @@ E:\C++Project\C++\InauguralProject\SourceCode\Math\Matrix4x4.cpp;E:\C++Project\C
 E:\C++Project\C++\InauguralProject\SourceCode\Resource\RenderTexture.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\RenderTexture.obj
 E:\C++Project\C++\InauguralProject\SourceCode\Resource\Texture.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Texture.obj
 E:\C++Project\C++\InauguralProject\SourceCode\Shader\Shader.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Shader.obj
+E:\C++Project\C++\InauguralProject\SourceCode\Utility\BufferViewer.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\BufferViewer.obj
 E:\C++Project\C++\InauguralProject\SourceCode\Utility\IblBaker.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\IblBaker.obj
 E:\C++Project\C++\InauguralProject\SourceCode\Utility\ImguiManager.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\ImguiManager.obj
 E:\C++Project\C++\InauguralProject\SourceCode\Utility\Imgui\imgui.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\imgui.obj
@@ -27,3 +29,4 @@ E:\C++Project\C++\InauguralProject\SourceCode\Utility\Imgui\imgui_impl_dx11.cpp;
 E:\C++Project\C++\InauguralProject\SourceCode\Utility\Imgui\imgui_impl_win32.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\imgui_impl_win32.obj
 E:\C++Project\C++\InauguralProject\SourceCode\Utility\Imgui\imgui_tables.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\imgui_tables.obj
 E:\C++Project\C++\InauguralProject\SourceCode\Utility\Imgui\imgui_widgets.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\imgui_widgets.obj
+E:\C++Project\C++\InauguralProject\SourceCode\Utility\Profiler.cpp;E:\C++Project\C++\InauguralProject\ShaderProject\x64\Debug\Profiler.obj

@@ -25,7 +25,7 @@ bool APP::Initialize(HINSTANCE hInstance, int nCmdShow)
     if (!InitWindow(hInstance, nCmdShow)) return false;
     if (!InitDirectX())                   return false;
     if (!InitManagers())                  return false;
-
+    
     // ─── 高分解能タイマーを初期化する
     QueryPerformanceFrequency(&m_perfFreq);
     QueryPerformanceCounter(&m_prevCounter);
@@ -152,6 +152,8 @@ bool APP::InitManagers()
     if (!m_shadowManager.Initialize(m_device.Get(), m_context.Get()))         return false;
     if (!m_gameObjectManager.Initialize(m_device.Get(), m_context.Get()))     return false;
     if (!m_imguiManager.Initialize(m_hWnd, m_device.Get(), m_context.Get()))  return false;
+    if (!m_profiler.Initialize(m_device.Get(), m_context.Get()))              return false;
+    if (!m_cloud.Initialize(m_device.Get(), m_context.Get()))                 return false;
 
     // ─── HDR 環境マップをベイクして IBL SRV を生成
     if (!m_iblBaker.Initialize(m_device.Get(), m_context.Get()))              return false;
@@ -167,6 +169,25 @@ bool APP::InitManagers()
 
     // ─── シェーダーをゲームオブジェクトに割り当てる
     m_gameObjectManager.AssignShaders(m_shaderManager);
+
+    OutputDebugStringA("[Viewer] Initialize 開始\n");
+    if (!m_bufferViewer.Initialize(m_device.Get(), m_context.Get()))
+    {
+        OutputDebugStringA("[Viewer] Initialize 失敗\n");
+        return false;
+    }
+
+    // ─── 表示候補を登録（SRV は生成後に安定している）
+    if (MIRROR* lMirror = m_gameObjectManager.GetMirror())
+        m_bufferViewer.AddSource("Mirror Reflection", lMirror->GetReflectionSrv(), VIEW_2D);
+    m_bufferViewer.AddSource("IBL Diffuse", m_iblBaker.GetDiffuseSrv(), VIEW_CUBE);
+    m_bufferViewer.AddSource("IBL Specular", m_iblBaker.GetSpecularSrv(), VIEW_CUBE);
+    m_bufferViewer.AddSource("BRDF LUT", m_iblBaker.GetBrdfLutSrv(), VIEW_2D);
+    m_bufferViewer.AddSource("HDR Source", m_iblBaker.GetHdrSrv(), VIEW_2D);
+
+    // ─── 影（キューブ配列・8灯ぶん）
+    m_bufferViewer.AddSource("Shadow Cube Array",
+        m_shadowManager.GetCubeArraySrv(), VIEW_CUBE_ARRAY, MAX_LIGHTS);
 
     // ─── シェーダーマネージャーにモデルリストを渡す（ImGui 用）
     m_shaderManager.SetModelList(m_gameObjectManager.GetModels());
@@ -192,6 +213,9 @@ void APP::Update()
     if (m_deltaSeconds > 0.1f) m_deltaSeconds = 0.1f;
 
     m_gameObjectManager.Update(m_deltaSeconds);
+
+    // ─── 雲用
+    m_timeSeconds += m_deltaSeconds;
 }
 
 // ------------------------------------------------------------
@@ -201,7 +225,10 @@ void APP::Update()
 // ------------------------------------------------------------
 void APP::Draw()
 {
-    // ─── シャドウマップ生成（コンテキスト構築はマネージャーに委譲）
+    m_profiler.BeginFrame();
+
+    // ─── シャドウマップ生成
+    m_profiler.BeginPass("Shadow");
     SHADOW_PASS_CONTEXT lShadowContext = m_gameObjectManager.BuildShadowContext(
         m_shaderManager.GetByName("Shadow"),
         m_shaderManager.GetByName("ShadowSkinned"),
@@ -209,37 +236,62 @@ void APP::Draw()
         m_depthStencilView.Get(),
         static_cast<UINT>(m_width),
         static_cast<UINT>(m_height));
-
     m_shadowManager.Execute(lShadowContext);
+    m_profiler.EndPass();
 
-    // ─── 反射パス：MIRROR は自前でライトを bind しないため、ここで影＋ライトを bind してから実行
+    // ─── 反射パス
+    m_profiler.BeginPass("Mirror");
     m_shadowManager.BindForLighting();
     m_gameObjectManager.GetLightManager().BindAll(1);
-
     m_gameObjectManager.ExecuteMirrorPass(
         m_renderTargetView.Get(),
         m_depthStencilView.Get(),
         static_cast<UINT>(m_width),
         static_cast<UINT>(m_height));
+    m_profiler.EndPass();
 
-    // ─── メインバッファをクリア
+    // ─── メインバッファをクリア（計測外）
     m_context->ClearRenderTargetView(m_renderTargetView.Get(), m_clearColor);
     m_context->ClearDepthStencilView(
         m_depthStencilView.Get(),
         D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
-    // ─── メイン描画：影 SRV を再バインド（ライトは GOM::Draw 内で bind される）
+    // ─── メイン描画（スカイボックス・モデル等）
+    m_profiler.BeginPass("Main");
     m_shadowManager.BindForLighting();
     m_gameObjectManager.Draw();
+    m_profiler.EndPass();
 
+    // ─── 雲（全画面・メインバッファへ合成）
+    m_profiler.BeginPass("Cloud");
+    m_cloud.Execute(
+        m_renderTargetView.Get(),
+        m_depthStencilView.Get(),
+        m_gameObjectManager.GetCamera(),
+        m_timeSeconds,
+        static_cast<UINT>(m_width),
+        static_cast<UINT>(m_height));
+    m_profiler.EndPass();
+
+    // ─── バッファビューア（選択中なら最終画を上書き表示）
+    m_profiler.BeginPass("Viewer");
+    m_bufferViewer.Execute(m_renderTargetView.Get(),
+        static_cast<UINT>(m_width), static_cast<UINT>(m_height));
+    m_profiler.EndPass();
+
+    // ─── ImGui（UI 描画コストも計測対象）
+    m_profiler.BeginPass("ImGui");
     m_imguiManager.BeginFrame();
-
     m_gameObjectManager.DrawImGui();
     m_shaderManager.DrawImGui();
-
+    m_profiler.DrawImGui();
+    m_cloud.DrawImGui();
+    m_bufferViewer.DrawImGui();
     m_imguiManager.EndFrame();
+    m_profiler.EndPass();
 
-    // ─── フレームを画面に表示（垂直同期あり）
+    m_profiler.EndFrame();
+
     m_swapChain->Present(1, 0);
 }
 
